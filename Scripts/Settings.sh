@@ -25,7 +25,7 @@ elif [[ $WRT_URL == *"immortalwrt"* ]]; then
 	VER_FILE=$(find ./feeds/luci/modules/ -type f -name "10_system.js")
 	awk -v wrt_repo="$WRT_REPO" -v wrt_date="$WRT_DATE" '{ gsub(/(\(luciversion \|\| \047\047\))/, "& + (\047 / "wrt_repo"-"wrt_date"\047)") } 1' $VER_FILE > temp.js && mv -f temp.js $VER_FILE
 	#修改默认WIFI名
-	sed -i "s/ssid=.*/ssid=$WRT_WIFI/g" ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
+ 	#sed -i "s/ssid=.*/ssid=$WRT_WIFI/g" ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
 fi
 
 #配置文件修改
