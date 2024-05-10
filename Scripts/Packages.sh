@@ -20,18 +20,18 @@ UPDATE_PACKAGE() {
 	fi
 }
 
-UPDATE_PACKAGE "design" "gngpp/luci-theme-design" "$([[ $WRT_URL == *"lede"* ]] && echo "main" || echo "js")"
-UPDATE_PACKAGE "design-config" "gngpp/luci-app-design-config" "master"
+#UPDATE_PACKAGE "design" "gngpp/luci-theme-design" "$([[ $WRT_URL == *"lede"* ]] && echo "main" || echo "js")"
+#UPDATE_PACKAGE "design-config" "gngpp/luci-app-design-config" "master"
 UPDATE_PACKAGE "argon" "jerrykuku/luci-theme-argon" "$([[ $WRT_URL == *"lede"* ]] && echo "18.06" || echo "master")"
 UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "$([[ $WRT_URL == *"lede"* ]] && echo "18.06" || echo "master")"
 
-UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
+#UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
 
-if [[ $WRT_URL == *"immortalwrt"* ]]; then
+#if [[ $WRT_URL == *"immortalwrt"* ]]; then
 	#UPDATE_PACKAGE "homeproxy" "muink/homeproxy" "dev"
-	UPDATE_PACKAGE "homeproxy" "immortalwrt/homeproxy" "dev"
-fi
+	#UPDATE_PACKAGE "homeproxy" "immortalwrt/homeproxy" "dev"
+#fi
 
 #更新软件包版本
 UPDATE_VERSION() {
@@ -54,4 +54,4 @@ UPDATE_VERSION() {
 	fi
 }
 
-UPDATE_VERSION "sing-box" "1.9.0-rc.9" "8bbb1c2650dc7276943a587b1c5f5459434c3523c8bd1077d84457f034633446"
+#UPDATE_VERSION "sing-box" "1.9.0-rc.9" "8bbb1c2650dc7276943a587b1c5f5459434c3523c8bd1077d84457f034633446"
